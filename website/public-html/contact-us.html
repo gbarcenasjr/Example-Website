@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="shortcut icon" type="image/jpg" href="/images/logo_transparent.png"/>
+</head>
+<body>
+<header>
+    <div class="logo">
+        <a href="/index.html"><img src="/images/logo_transparent.png" alt="Acme Adventure Logo" width="200"></a>
+    </div>
+    <nav class="site-nav grid">
+        <h1>Acme Adventure Travel</h1>
+        <button class="button"
+                onclick="window.location.href = '/index.html';">
+            Home Page
+        </button>
+        <button class="button"
+                onclick="window.location.href = '/why-travel-with-us.html';">
+            Why Travel With Us
+        </button>
+        <button class="button"
+                onclick="window.location.href = '/our-trips.html';">
+            Our Trips
+        </button>
+        <button class="button"
+                onclick="window.location.href = '/catalog-request.html';">
+            Catalog Requests
+        </button>
+    </nav>
+</header>
+
+<main>
+    <hr>
+    <article id="mission-statement">
+        <h2>Contact Us</h2>
+        <form name="contact-us" action="cgi-bin/contactUs.py" method="Post">
+            <div class="field-group">
+                <label for="contact-name">Your Name: </label>
+                <input type="text" name="name" id="contact-name">
+            </div>
+            <div class="field-group">
+                <label for="contact-regarding">Regarding: </label>
+                <select name="regarding" id="contact-regarding">
+                    <option value="">Select One</option>
+                    <option value="CS">Customer Service</option>
+                    <option value="Sale">Sales</option>
+                    <option value="PR">Private Trips</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="field-group">
+                <label for="contact-phone">Phone Number: </label>
+                <input type="tel" name="phone_number" id="contact-phone">
+            </div>
+            <div class="field-group">
+                <label for="contact-phone">Email Address: </label>
+                <input type="email" name="email_address" id="contact-address">
+            </div>
+            <div class="field-group">
+                <label for="contact-message">Message: </label><br>
+                <textarea name="message" id="contact-message"></textarea>
+            </div>
+            <div class="controls">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </article>
+</main>
+
+<footer>
+    <hr>
+    <div id="copyright">
+        <p>Copyright © 2021 Acme Adventure Travel, Inc.</p>
+    </div>
+    <div id="footer-links">
+        <button class="button"
+                onclick="window.location.href = '/privacy-policy.html';">
+            Privacy Policy
+        </button>
+        <button class="button"
+                onclick="window.location.href = '/contact-us.html';">
+            Contact Us
+        </button>
+    </div>
+</footer>
+</body>
+</html>

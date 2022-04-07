@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  web:
+    container_name: cs351Webserver
+    build: .
+    image: web
+    ports:
+      - "8080:80"
+    volumes:
+      - ./website/public-html/:/usr/local/apache2/htdocs/
+      - ./website/cgi-bin/:/usr/local/apache2/cgi-bin/
+      - ./logs/:/usr/local/apache2/logs/
